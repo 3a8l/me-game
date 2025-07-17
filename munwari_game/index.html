@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منوري</title>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        canvas { background: url('moon-background.jpg') no-repeat center/cover; display: block; }
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: grid;
+            grid-template-columns: 60px 60px 60px;
+            grid-template-rows: 60px 60px 60px;
+            gap: 5px;
+        }
+        .btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            user-select: none;
+        }
+        .btn:active {
+            background: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="gameCanvas"></canvas>
+
+<div class="controls">
+    <div></div> <div class="btn" id="up">↑</div> <div></div>
+    <div class="btn" id="left">←</div> <div></div> <div class="btn" id="right">→</div>
+    <div></div> <div class="btn" id="down">↓</div> <div></div>
+</div>
+
+<audio id="moveSound" src="cat-sound.mp3"></audio>
+
+<script src="game.js"></script>
+
+</body>
+</html>
